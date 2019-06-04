@@ -1,0 +1,16 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <body>
+       
+<form action="#" th:action="@{/savebookprocess}" th:object="${subject}" method="post">
+    <label for="subtitle">Subtitle</label>
+    <input type="text" th:field="*{subtitle}" id="subtitle" placeholder="Name"/>
+    <span th:if="${#fields.hasErrors('subtitle')}" th:errors="*{subtitle}"></span>
+    <label for="durationInHours">Duration In Hours</label>
+    <input type="text" th:field="*{durationInHours}" id="durationInHours" placeholder="durationInHours"/>
+    <span th:if="${#fields.hasErrors('durationInHours')}" th:errors="*{durationInHours}"></span>
+    <input type="Submit" value="Add Subject"/>   
+</form>
+
+
+    </body>
+</html>

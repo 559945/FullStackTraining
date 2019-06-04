@@ -1,0 +1,33 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <link rel="stylesheet" href="test.css">
+</head>
+
+            <h2>Subjects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subtitle</th>
+                        <th>Duration In Hours</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="subject : ${subjects}">
+                    <td th:text="${subject.subtitle}"></td>
+                    <td th:text="${subject.durationInHours}"></td>
+                    <td><a th:href="@{/editsubject/{id}(id=${subject.subjectId})}">Edit</a></td>
+                    <td><a th:href="@{/deletesubject/{id}(id=${subject.subjectId})}">Delete</a></td>
+                    <td><a th:href="@{/getbooksbysubjectid/{id}(id=${subject.subjectId})}">Get All Books</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>      
+    <p><a href="/savebook">Add a new subject</a></p>
+    
+</div>
+
+</html>

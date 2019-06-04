@@ -1,0 +1,6 @@
+com\mcnz\rps\smvc\BookRepository.class
+com\mcnz\rps\smvc\SubjectRepository.class
+com\mcnz\rps\smvc\Subject.class
+com\mcnz\rps\smvc\Book.class
+com\mcnz\rps\smvc\SpringMvcRpsApplication.class
+com\mcnz\rps\smvc\WebController.class
